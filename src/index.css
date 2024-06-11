@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #000000
+}
+
+
+@layer components {
+  .AppBar{
+    @apply bg-black text-white flex flex-row top-0 z-[20] 
+    w-screen justify-evenly pt-9
+  }
+
+  .nav-space{
+    @apply flex flex-row space-x-7 mx-auto top-0  
+  }
+
+  .settings-icon{
+    @apply hover:-rotate-180 hover:text-blue-800 transition-all duration-500 
+  }
+
+  .discord-icon{
+    @apply hover:text-blue-700 duration-500 
+  }
+
+  .heart-icon{
+    @apply hover:text-red-800 duration-500 
+  }  
+
+
+
+  .book-icon{
+    @apply hover:text-green-700 duration-500 
+  }
+
+  .main-searchbar{
+    @apply flex flex-col items-center bg-black 
+  }
+
+  .logo{
+    @apply w-64 h-64 mt-6
+  }
+
+
+  .logo-text{
+    @apply font-VT323 text-white text-7xl -m-9
+  }
+
+  .searchbar_logo{
+    @apply m-12 flex flex-col justify-start items-center bg-white rounded-3xl
+  }
+
+  .searchbar{
+    @apply rounded-r-3xl w-120 h-10 ml-2 outline-none font-VT323 text-2xl transition-all duration-100
+  }
+
+  .selected-tags{
+    @apply text-white p-2 m-1 bg-gray-800 rounded
+  }
+
+  .tag-display{
+    @apply flex flex-col text-xl font-bold font-VT323 transition-all duration-100
+
+  }
+
+
+  .searchMe{
+    @apply flex bg-red-onepiece w-3/12 h-12 text-center align-middle items-center justify-center font-VT323 text-3xl rounded-2xl 
+  }
+
+
+  .images-container{
+    @apply flex flex-col align-middle items-center justify-center bg-black font-VT323 text-xl 
+  }
+
+
+  .image-list-container{
+    @apply flex flex-col items-center justify-center align-middle  bg-black
+  }
+  
+
+  .image-full-container{
+    @apply flex flex-col items-center justify-center align-middle  border-separate pt-10  bg-black
+  }
+
+
+  .image{
+    @apply bg-black min-h-full rounded-t-xl w-800 h-max transition-all
+  }
+
+  .image-bottom{
+    @apply flex flex-row items-center  bg-white w-800 min-h-full text-black justify-between rounded-b-xl transition-all
+  }
+  
+  .image-buttons{
+    @apply flex flex-row justify-between align-middle items-center m-2 
+   }
+}
