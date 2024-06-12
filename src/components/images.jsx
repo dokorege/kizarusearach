@@ -28,5 +28,6 @@ export default function Images({index, durration}){
                 </div>
             </li>
     </section>
+    
 );
 }

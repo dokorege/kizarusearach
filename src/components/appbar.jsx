@@ -8,7 +8,7 @@ import { CiHeart } from "react-icons/ci";
 export default function AppBar(){ 
 
     return(
-            <div className="AppBar"> 
+            <div className="AppBar" id="AppBar"> 
                     <div className="nav-space">
                         <FaHeart className="heart-icon" size={24} /> 
                         <FaDiscord className="discord-icon" size={25} />

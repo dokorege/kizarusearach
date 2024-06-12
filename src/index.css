@@ -9,8 +9,30 @@ body {
 
 
 @layer components {
+
+  .overlay{
+    @apply  fixed inset-0 cursor-pointer z-[4] bg-transparent w-screen h-screen backdrop-blur-2xl flex justify-center align-middle items-center 
+
+  }
+  .prompt-main{
+    @apply flex flex-col text-center align-middle justify-center items-center bg-black h-120 border-purple-gear5 border-4 rounded-2xl 
+  }
+
+  .prompt-img{
+    @apply w-7/12
+  }
+
+  .prompt-logo-text{
+    @apply text-white font-VT323  text-5xl
+  }
+
+  .prompt-button{
+    @apply mr-3 ml-3 text-white bg-purple-jolly w-40 h-12 text-center align-middle items-center justify-center font-VT323 rounded-xl text-xl
+  }
+
+
   .AppBar{
-    @apply bg-black text-white flex flex-row top-0 z-[20] 
+    @apply bg-black text-white flex flex-row top-0 z-[2] 
     w-screen justify-evenly pt-9
   }
 
@@ -33,7 +55,7 @@ body {
 
 
   .book-icon{
-    @apply hover:text-green-700 duration-500 
+    @apply hover:text-purple-gear5 duration-500 
   }
 
   .main-searchbar{
@@ -41,7 +63,7 @@ body {
   }
 
   .logo{
-    @apply w-64 h-64 mt-6
+    @apply w-64 h-56 mt-6 mb-6
   }
 
 
@@ -68,7 +90,7 @@ body {
 
 
   .searchMe{
-    @apply flex bg-red-onepiece w-3/12 h-12 text-center align-middle items-center justify-center font-VT323 text-3xl rounded-2xl 
+    @apply flex bg-purple-jolly w-3/12 h-12 text-center align-middle items-center justify-center font-VT323 text-3xl rounded-2xl 
   }
 
 
@@ -98,4 +120,24 @@ body {
   .image-buttons{
     @apply flex flex-row justify-between align-middle items-center m-2 
    }
+
+  .noLoad{
+    @apply flex flex-col justify-center align-middle items-center text-center bg-purple-1000 w-120 h-max rounded-2xl mt-10 mb-7
+  }
+
+  .noLoadImage{
+    @apply w-88
+  }
+
+  .noLoadText{
+    @apply text-white text-5xl pb-5
+  }
+
+  .noLoadButtons{
+    @apply flex flex-row align-middle items-center justify-center  pb-5
+  }
+
+  .noLoadButton{
+    @apply mr-5 ml-5 text-white bg-purple-jolly w-32 h-12 text-center align-middle items-center justify-center font-VT323 rounded-xl 
+  }
 }

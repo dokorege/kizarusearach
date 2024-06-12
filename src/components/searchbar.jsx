@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Axios from 'axios';
 import TagDisplay from "./tags";
 
+let count = null
+
 export default function Searchbar({ onTagsSelected }) {
     const [tags, setTags] = useState([]);
     const [query, setQuery] = useState("");
@@ -51,15 +53,24 @@ export default function Searchbar({ onTagsSelected }) {
         }, 100);
     };
 
+
+
     return (
-        <div className="main-searchbar container mx-auto p-4">
+        
+
+        
+        <div onLoad={handleSearch} className="main-searchbar container mx-auto p-4">
+
+            
+
+
             <img className='logo' src="src/assets/onepiece.png" />
             <h1 className='logo-text'>kizarusearch</h1>
 
             <div className='searchbar_logo'>
                 <div className="flex flex-row">
                     <div className='left-48'> &nbsp; </div>
-                    <button className="fixed"> <FaCirclePlus size={25} /></button>
+                    <button className=""> <FaCirclePlus size={25} /></button>
                     <input
                         className="searchbar"
                         placeholder="Search Tags Here"
@@ -80,14 +91,14 @@ export default function Searchbar({ onTagsSelected }) {
                     </div>
                 )}
             </div>
-
-            <button className="searchMe" onClick={handleSearch}>
+            
+            <button className="searchMe" onLoad={handleSearch} onClick={handleSearch}>
                 <div>Search</div>
             </button>
 
             <div className="selected-tags bg-black p-4 mt-4 flex flex-wrap w-full">
                 {selectedTags.map((tag, index) => (
-                    <div key={index} className="selected-tag text-white p-2 m-1 bg-gray-800 rounded">
+                    <div key={index} className="selected-tag text-white p-2 m-1 bg-purple-1000 rounded">
                         {tag}
                     </div>
                 ))}

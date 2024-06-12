@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         purple: {
-          1000: '#151520'
+          1000: '#151520',
+          'gear5': '#944392',
+          'jolly': '#6D0CBE'
         },
 
         red:{
@@ -34,7 +36,8 @@ module.exports = {
       },
       spacing: {
         88: '22rem',
-        120: '37rem',
+        120: '31rem',
+        130: '40rem',
         800: '50rem'
       },
     },

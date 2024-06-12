@@ -1,6 +1,8 @@
 import AppBar from "./components/appbar";
 import Searchbar from "./components/searchbar";
+import NoImages from "./components/noImages.jsx";
 import Images from "./components/images.jsx";
+import Prompt from "./components/prompt.jsx";
 import { useState, useEffect } from "react";
 import Axios from 'axios';
 
@@ -22,7 +24,7 @@ function App() {
         let imageLinks = [];
         let duration = [];
         const tagsQuery = selectedTags.map(tag => encodeURIComponent(tag.replace(/ /g, '_'))).join('+');
-        const imageURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&limit=26&tags=${tagsQuery}`;
+        const imageURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&limit=26&tags=rating%3asafe+${tagsQuery}`;
 
         try {
             const response = await Axios.get(imageURL, { format: "xml", paymentType: "ach" });
@@ -46,7 +48,10 @@ function App() {
     };
 
     return (
+        <>
+        <Prompt/>
         <div className="flex flex-col h-screen bg-black items-center">
+           
             <div className="flex flex-row bg-black top-0">
                 <AppBar />
             </div>
@@ -58,8 +63,13 @@ function App() {
                         <Images duration={duration[index]} key={index} index={image} />
                     ))}
                 </ol>
+
+                <NoImages/>
             </section>
+
+            
         </div>
+        </>
     );
 }
 
